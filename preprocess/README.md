@@ -1,4 +1,4 @@
-# Data Preparation Guide ([中文](README_Ch.md))
+# Data Preparation Guide ([中文](README_ch.md))
 
 This document provides detailed instructions for preparing the dataset used in this project, including data download via **Google Earth Engine (GEE)** and local preprocessing.
 
