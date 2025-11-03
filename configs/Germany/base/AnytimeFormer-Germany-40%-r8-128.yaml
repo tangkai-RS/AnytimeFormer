@@ -1,0 +1,49 @@
+model: 
+  model_name: "AnytimeFormer" # model type, Transformer/AnytimeFormer
+
+  with_atten_mask: False # whether using attention mask
+  n_groups: 2 # num of layer groups
+  n_group_inner_layers: 1 # num of group-inner layers
+  d_model: 128 # model hidden dim
+  d_inner: 64 # hidden size of feed forward layer
+  n_head: 4 # head num of self-attention
+  d_k: 32 # key dim
+  d_v: 32 # value dim
+  dropout: 0.1 # drop out rate
+  diagonal_attention_mask: True # whether to apply diagonal attention mask
+  
+
+  #----- The following parameters need to be modified based on your own data | 下面参数需要根据自己的数据修改 -------
+  d_feature: 10 # num of features/bands
+  d_time: 54 # num of timesteps/temporal length of Sentinel-2
+  with_X_aux: True # whether using the SAR data
+  d_time_aux: 120 # num of timesteps/temporal length of SAR
+  d_feature_aux: 2 # number of SAR features/bands
+  #----------------------------------------------------------------------------------------------------------------
+
+
+  learn_emb: False # whether learning embeddings for time points, default is False
+  rank: 8 # low rank number
+
+training:
+  batch_size: 128
+  lr: 0.0001
+  epochs: 10
+  num_workers: 0 # windows does not support multi-processing, set to 0; for linux, set to 2 or 4
+  artificial_missing_rate: 0.25 # artificial_missing_rate during training
+  device: "cuda"
+  with_rec_loss: True
+
+mode:
+  debug_mode: False
+  mode: "train_test"
+  gap_mode: "random"
+
+dataset:
+  original_dataset_path: ""
+  work_dir: ""
+  saved_model_path: None
+
+experiment:
+  exp_name: ""
+  ratio: "40%" # 缺失模拟比例 （模拟缺失的pixel用于验证指标计算）

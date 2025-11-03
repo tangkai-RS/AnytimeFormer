@@ -1,0 +1,16 @@
+# Ignore everything under these folders
+/dataset/dataset_for_model/Germany/*
+/dataset/dataset_down_from_GEE/Germany/*
+
+# Keep the tif folder itself
+!/dataset/dataset_for_model/Germany/tif/
+
+# Ignore all subfolders under tif except 40%
+/dataset/dataset_for_model/Germany/tif/*
+
+# Keep 40% folder
+!/dataset/dataset_for_model/Germany/tif/40%/
+
+# Ignore all files under 40% except the one you want
+/dataset/dataset_for_model/Germany/tif/40%/*
+!/dataset/dataset_for_model/Germany/tif/40%/S2_L2A_20190208.tif
