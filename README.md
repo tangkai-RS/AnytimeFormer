@@ -20,7 +20,7 @@
 
 ## 📰 News
 
-- **[2025-11]** **AnytimeFormer** has been accepted by *Remote Sensing of Environment (RSE)* !  
+- **[2025-11]** **AnytimeFormer** has been accepted by *Remote Sensing of Environment (RSE)* ! [[Paper]](https://doi.org/10.1016/j.rse.2025.115120)  
 
 
 ## 📜Outline
@@ -227,7 +227,7 @@ On Windows systems, you can directly modify the arguments in `main.py` and run i
 
 For more details about parameter settings, relative to training, you only need to make the following modifications:  
 - Set `--mode` to `"test"` (seq2seq model) or `"test_anytime"` (anytime mode) 
-- Set `--saved_model_path` to the path of the best trained model
+- Set `--saved_model_path` to the path of the best-trained model
 - **Pay attention to ```anytime_ouput```** of the [config.yaml](configs/Germany/anytime/AnytimeFormer-Germany-40%25-r8-128-wTV.yaml)
 
 ✨If you have any questions about parameter setting, please submit issues.
@@ -240,7 +240,15 @@ We will gradually release pipelines for some benchmark methods (e.g., U-TILISE a
 ## 📄 Citation
 
 ```bibtex
-Comming soon
+@article{tang2026anytime,
+title = {AnytimeFormer: Fusing irregular and asynchronous SAR-optical time series to reconstruct reflectance at any given time},
+author  = {Tang, Kai and Chen, Xuehong and Liu, Tianyu and Li, Anqi and Tang, Yao and Yang, Peng and Chen, Jin},
+journal = {Remote Sensing of Environment},
+volume = {333},
+pages = {115120},
+year = {2026},
+issn = {0034-4257},
+}
 ```
 
 ✨If you have any questions or collaboration suggestions, please contact us (tangkai@mail.bnu.edu.cn).
