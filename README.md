@@ -19,8 +19,8 @@
 ---
 
 ## 📰 News
-
-- **[2025-11]** **AnytimeFormer** has been accepted by *Remote Sensing of Environment (RSE)* ! [[Paper]](https://doi.org/10.1016/j.rse.2025.115120)  
+- **[2026-01-13]** Fixed the checkpoint saving criterion in **Anytime mode** by correcting the `indicating_mask` used in the computation of the validation metric. Detailed revision is provided [here](https://github.com/tangkai-RS/AnytimeFormer/commit/d0f423afac693976c2f54d1a32b53d6d9c6e2c83).
+- **[2025-11-07]** **AnytimeFormer** has been accepted by *Remote Sensing of Environment (RSE)* ! [[Paper]](https://doi.org/10.1016/j.rse.2025.115120)  
 
 
 ## 📜Outline
